@@ -10,7 +10,27 @@ const anekLatin = Anek_Latin({
 
 export const metadata: Metadata = {
   title: "BrickBot - Links",
-  description: "BrickBot's custom implementation of linktree.",
+  description: "Links relevant to our current initiatives.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    url: "https://links.brickbot.ro/",
+    siteName: "BrickBot - Links",
+    images: [
+      {
+        url: "https://brickbot.ro/embed-icon.png",
+        width: 256,
+        height: 256,
+        alt: "BrickBot Icon",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://brickbot.ro/embed-icon.png"],
+  },
 };
 
 export default function RootLayout({
