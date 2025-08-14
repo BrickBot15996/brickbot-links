@@ -9,12 +9,21 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
 import { useRouter } from "next/navigation";
 import { BiLogoFacebook } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 export default function Socials() {
   const router = useRouter();
   return (
     <>
-      <div className="flex flex-row justify-between w-[var(--content-width)] mt-[var(--section-gap)] mb-[var(--related-gap)]">
+      <motion.div
+        initial={{ opacity: 0, translateY: 60 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: 0.4,
+          ease: "easeOut",
+        }}
+        className="flex flex-row justify-between w-[var(--content-width)] mt-[var(--section-gap)] mb-[var(--related-gap)]"
+      >
         <InteractiveBox
           className="p-[var(--icon-padding)] flex flex-col items-center justify-center w-full h-full"
           onClickAction={() => {
@@ -59,8 +68,17 @@ export default function Socials() {
         >
           <AiOutlineTikTok className="w-[var(--icon-size)] h-[var(--icon-size)] fill-white" />
         </InteractiveBox>
-      </div>
-      <div className="flex flex-row justify-between w-[var(--content-width)]">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, translateY: 60 }}
+        animate={{ opacity: 1, translateY: 0 }}
+        transition={{
+          duration: 0.4,
+          ease: "easeOut",
+          delay: 0.1,
+        }}
+        className="flex flex-row justify-between w-[var(--content-width)]"
+      >
         <InteractiveBox
           className="p-[var(--icon-padding)] flex flex-col items-center justify-center w-full h-full"
           onClickAction={() => {
@@ -110,7 +128,7 @@ export default function Socials() {
         >
           <VscGithub className="w-[var(--icon-size)] h-[var(--icon-size)] fill-white" />
         </InteractiveBox>
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -1,4 +1,6 @@
+"use client";
 import LinkBox from "./link-box";
+import { motion } from "framer-motion";
 
 export default function LinkList() {
   return (
@@ -15,12 +17,22 @@ export default function LinkList() {
         })
         .map((link, index) => {
           return (
-            <LinkBox
+            <motion.div
               key={index}
-              title={link.title}
-              link={link.link}
-              highlighted={link.highlighted}
-            />
+              initial={{ opacity: 0, translateY: 60 }}
+              animate={{ opacity: 1, translateY: 0 }}
+              transition={{
+                duration: 0.4,
+                ease: "easeOut",
+                delay: index * 0.1 + 0.2,
+              }}
+            >
+              <LinkBox
+                title={link.title}
+                link={link.link}
+                highlighted={link.highlighted}
+              />
+            </motion.div>
           );
         })}
     </section>
