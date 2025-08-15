@@ -22,8 +22,10 @@ export default function LinkList() {
               initial={{ opacity: 0, translateY: 60 }}
               animate={{ opacity: 1, translateY: 0 }}
               transition={{
-                duration: 0.4,
+                visualDuration: 0.4,
                 ease: "easeOut",
+                type: "spring",
+                bounce: 0.35,
                 delay: index * 0.1 + 0.2,
               }}
             >

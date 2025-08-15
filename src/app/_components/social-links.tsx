@@ -19,8 +19,10 @@ export default function Socials() {
         initial={{ opacity: 0, translateY: 60 }}
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
-          duration: 0.4,
+          visualDuration: 0.4,
           ease: "easeOut",
+          type: "spring",
+          bounce: 0.35,
         }}
         className="flex flex-row justify-between w-[var(--content-width)] mt-[var(--section-gap)] mb-[var(--related-gap)]"
       >
@@ -73,8 +75,10 @@ export default function Socials() {
         initial={{ opacity: 0, translateY: 60 }}
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
-          duration: 0.4,
+          visualDuration: 0.4,
           ease: "easeOut",
+          type: "spring",
+          bounce: 0.35,
           delay: 0.1,
         }}
         className="flex flex-row justify-between w-[var(--content-width)]"

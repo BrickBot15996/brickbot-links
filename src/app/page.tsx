@@ -45,8 +45,8 @@ export default function Home() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="mt-[calc(var(--section-gap)] text-[#9B9B9B]"
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="mt-[var(--section-gap)] text-[#9B9B9B]"
         style={{ fontSize: "var(--link-text-size)" }}
       >
         BrickBot © {date.getFullYear()}

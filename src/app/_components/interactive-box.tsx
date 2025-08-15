@@ -1,6 +1,6 @@
 "use client";
 
-import { CSSProperties, ReactNode, useEffect, useRef, useState } from "react";
+import { CSSProperties, ReactNode, useRef, useState } from "react";
 import Box from "./box";
 import { motion } from "framer-motion";
 
@@ -39,7 +39,7 @@ export default function InteractiveBox({
     attachGlobalReleaseListener();
   };
 
-  const handleMouseUp = (event: React.MouseEvent) => {
+  const handleMouseUp = () => {
     if (isHovered && pressType.current) {
       if (pressType.current === "left") {
         onClickAction?.();
