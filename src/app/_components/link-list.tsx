@@ -1,6 +1,8 @@
 "use client";
+import Image from "next/image";
 import LinkBox from "./link-box";
 import { motion } from "framer-motion";
+import { li } from "motion/react-client";
 
 export default function LinkList() {
   return (
@@ -33,6 +35,7 @@ export default function LinkList() {
                 title={link.title}
                 link={link.link}
                 highlighted={link.highlighted}
+                icon={link.icon}
               />
             </motion.div>
           );
@@ -41,10 +44,38 @@ export default function LinkList() {
   );
 }
 
-const links: { title: string; link: string; highlighted?: boolean }[] = [
+const links: {
+  title: string;
+  link: string;
+  highlighted?: boolean;
+  icon?: React.ReactNode;
+}[] = [
   {
     title: "BrickBot Recruitment Form",
     link: "brickbot.ro/apply",
     highlighted: true,
+  },
+  {
+    title: "The Vault Submission Form",
+    link: "brickbot.ro/submit-portfolio",
+    highlighted: false,
+    icon: (
+      <div className="h-[var(--icon-size)] w-[var(--icon-size)] p-[0.1rem]">
+        <div
+          className="w-full h-full"
+          style={{
+            WebkitMaskImage: "url(/the-vault-icon.svg)",
+            WebkitMaskRepeat: "no-repeat",
+            WebkitMaskPosition: "center",
+            WebkitMaskSize: "contain",
+            maskImage: "url(/the-vault-icon.svg)",
+            maskRepeat: "no-repeat",
+            maskPosition: "center",
+            maskSize: "contain",
+            backgroundColor: "#9B9B9B",
+          }}
+        />
+      </div>
+    ),
   },
 ];

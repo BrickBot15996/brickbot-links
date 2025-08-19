@@ -99,6 +99,12 @@
 :root {
   --background: #0f0f0f;
   --foreground: #ffffff;
+
+  --box-bg: #1a1a1a;
+  --box-bg-highlighted: #2d2b22;
+
+  --box-border: #363636;
+  --box-border-highlighted: #9e9563;
 }
 
 @theme inline {
