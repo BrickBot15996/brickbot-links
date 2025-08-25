@@ -6,6 +6,7 @@ import "./globals.css";
 const anekLatin = Anek_Latin({
   variable: "--font-anek-latin",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
   description: "Links relevant to our current initiatives.",
   icons: {
     icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "https://links.brickbot.ro/",
   },
   openGraph: {
     url: "https://links.brickbot.ro/",
@@ -40,6 +44,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/dark-bg-favicon.ico"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body
         className={`${anekLatin.variable} antialiased flex flex-col items-center justify-start`}
       >
