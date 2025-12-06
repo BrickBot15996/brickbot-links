@@ -51,8 +51,8 @@ const links: {
   icon?: React.ReactNode;
 }[] = [
   {
-    title: "BrickBot Recruitment Form",
-    link: "brickbot.ro/apply",
+    title: "Registration - Focșani Tech Challenge League Meet",
+    link: "brickbot.ro/meet",
     highlighted: true,
   },
   {

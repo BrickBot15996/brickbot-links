@@ -114,6 +114,21 @@
 }
 
 html,
+body,
+#__next {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#__next::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+html,
 body {
   overflow-x: hidden;
   margin: 0;
