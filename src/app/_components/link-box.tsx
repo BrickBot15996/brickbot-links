@@ -45,7 +45,7 @@ export default function LinkBox({
       <div className="flex flex-row space-x-[var(--icon-padding)] p-[var(--icon-padding)] items-center justify-center">
         {icon}
         <div
-          className="flex flex-col mr-auto"
+          className="flex flex-col mr-auto flex-[0_85%]"
           style={{
             fontSize: "var(--link-text-size)",
             lineHeight: "var(--link-text-line-height)",
