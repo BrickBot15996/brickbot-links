@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-start justify-center bg-(--bg-dark) relative select-none">
       <div
-        className="absolute top-[min(calc(20rem-20vw),0rem)] bg-linear-to-b from-[#191816] to-[#0F0F0F] h-auto w-[min(100vw,120rem)] aspect-[1.8/1] object-contain"
+        className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#191816] to-(--bg-dark) to-70% h-auto w-[min(100vw,120rem)] aspect-[1.8/1] object-contain"
         style={{
           WebkitMaskImage: "url(/brickbot-yellow.svg)",
           WebkitMaskRepeat: "no-repeat",
@@ -32,7 +32,7 @@ export default function Home() {
           maskSize: "contain",
         }}
       />
-      <div className="flex flex-col items-center justify-center gap-[2rem] mt-[clamp(2.5rem,2.3rem+0.1vw,4rem)] h-full max-w-(--content-width) z-[100]">
+      <div className="flex flex-col items-center justify-center gap-[2rem] mt-[clamp(2.5rem,2rem+5vw,6rem)] h-full max-w-(--content-width) z-[100]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -98,7 +98,7 @@ function SocialIcons() {
           aria-label="Team Website"
         >
           <IconCard>
-            <CiGlobe className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <CiGlobe className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
         <Link
@@ -107,7 +107,7 @@ function SocialIcons() {
           aria-label="Team Instagram"
         >
           <IconCard>
-            <CiInstagram className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <CiInstagram className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
         <Link
@@ -116,7 +116,7 @@ function SocialIcons() {
           aria-label="Team Facebook"
         >
           <IconCard>
-            <CiFacebook className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <CiFacebook className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
         <Link
@@ -125,7 +125,7 @@ function SocialIcons() {
           aria-label="Team TikTok"
         >
           <IconCard>
-            <PiTiktokLogoLight className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <PiTiktokLogoLight className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
       </motion.div>
@@ -147,7 +147,7 @@ function SocialIcons() {
           aria-label="Team LinkedIn"
         >
           <IconCard>
-            <CiLinkedin className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <CiLinkedin className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
         <Link
@@ -156,7 +156,7 @@ function SocialIcons() {
           aria-label="Team Email"
         >
           <IconCard>
-            <CiMail className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <CiMail className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
         <Link
@@ -165,7 +165,7 @@ function SocialIcons() {
           aria-label="Team YouTube"
         >
           <IconCard>
-            <PiYoutubeLogoLight className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <PiYoutubeLogoLight className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
         <Link
@@ -174,7 +174,7 @@ function SocialIcons() {
           aria-label="Team GitHub"
         >
           <IconCard>
-            <VscGithubAlt className="h-[2rem] w-[2rem] fill-[#f8f8f8]" />
+            <VscGithubAlt className="h-[2rem] w-[2rem] fill-(--text)" />
           </IconCard>
         </Link>
       </motion.div>
@@ -196,9 +196,9 @@ function Links() {
       highlighted: false,
       link: "https://brickbot.ro/submit-portfolio",
       icon: (
-        <div className="h-(--icon-size) w-(--icon-size)">
+        <div className="h-(--icon-size) w-(--icon-size) p-[0.2rem]">
           <div
-            className="w-full h-full"
+            className="w-full h-full bg-(--text)"
             style={{
               WebkitMaskImage: "url(/the-vault-icon.svg)",
               WebkitMaskRepeat: "no-repeat",
@@ -208,7 +208,6 @@ function Links() {
               maskRepeat: "no-repeat",
               maskPosition: "center",
               maskSize: "contain",
-              backgroundColor: "#9B9B9B",
             }}
           />
         </div>
