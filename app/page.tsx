@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-start justify-center bg-(--bg-dark) relative select-none">
       <div
-        className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#191816] to-(--bg-dark) to-70% h-auto w-[min(100vw,120rem)] aspect-[1.8/1] object-contain"
+        className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#1c1c1c] to-(--bg-dark) to-70% h-auto w-[min(100vw,120rem)] aspect-[1.8/1] object-contain"
         style={{
           WebkitMaskImage: "url(/brickbot-yellow.svg)",
           WebkitMaskRepeat: "no-repeat",
@@ -59,7 +59,7 @@ export default function Home() {
               className="object-contain w-full h-full"
             />
           </div>
-          <h1 className="text-md text-[#ffffff] font-semi-condensed mt-[var(--related-gap)]">
+          <h1 className="text-md text-[#f8f8f8] font-semi-condensed mt-[var(--related-gap)]">
             FTC Team 15996
           </h1>
         </motion.div>
