@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
-import { Anek_Latin } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
-
-const anekLatin = Anek_Latin({
-  variable: "--font-anek-latin",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "BrickBot - Links",
@@ -44,27 +36,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="icon"
-          type="image/x-icon"
-          href="/dark-bg-favicon.ico"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
-      <body
-        className={`${anekLatin.variable} antialiased flex flex-col items-center justify-start`}
-      >
-        {children} <Analytics />
-      </body>
+      <link
+        rel="icon"
+        type="image/x-icon"
+        href="/dark-bg-favicon.ico"
+      />
+      <body className={`antialiased`}>{children}</body>
     </html>
   );
 }
