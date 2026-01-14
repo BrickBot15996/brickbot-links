@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-start justify-center bg-(--bg-dark) relative select-none">
       <div
-        className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#1c1c1c] to-(--bg-dark) to-70% h-auto w-[min(100vw,120rem)] aspect-[1.8/1] object-contain max-h-screen"
+        className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#1c1c1c] to-(--bg-dark) to-70% h-auto w-full max-w-[min(100vw,120rem)] aspect-[1.8/1] object-contain max-h-screen"
         style={{
           WebkitMaskImage: "url(/brickbot-yellow.svg)",
           WebkitMaskRepeat: "no-repeat",
