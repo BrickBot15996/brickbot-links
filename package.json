@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.6.1",
     "brickbot-ui": "^0.1.4",
     "motion": "^12.24.8",
     "next": "16.1.1",
