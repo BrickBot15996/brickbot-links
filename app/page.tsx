@@ -191,20 +191,20 @@ function Links() {
       link: "https://brickbot.ro/meet",
     },
     {
-      title: "Submit Your FTC Portfolio!",
-      displayLink: "brickbot.ro/submit-portfolio",
+      title: "Redirect 3.5% of your income tax to help BrickBot!",
+      displayLink: "brickbot.ro/formular230",
       highlighted: false,
-      link: "https://brickbot.ro/submit-portfolio",
+      link: "https://brickbot.ro/formular230",
       icon: (
-        <div className="h-(--icon-size) w-(--icon-size) p-[0.2rem]">
+        <div className="h-(--icon-size) w-(--icon-size) p-[0.1rem]">
           <div
             className="w-full h-full bg-(--text)"
             style={{
-              WebkitMaskImage: "url(/the-vault-icon.svg)",
+              WebkitMaskImage: "url(/230.svg)",
               WebkitMaskRepeat: "no-repeat",
               WebkitMaskPosition: "center",
               WebkitMaskSize: "contain",
-              maskImage: "url(/the-vault-icon.svg)",
+              maskImage: "url(/230.svg)",
               maskRepeat: "no-repeat",
               maskPosition: "center",
               maskSize: "contain",
@@ -215,9 +215,19 @@ function Links() {
     },
   ];
 
+  const date = new Date();
+
   return (
     <div className="flex flex-col gap-[2rem]">
       {linkList.map((link, index) => {
+        if (
+          ((date.getDate() > 24 && date.getMonth() === 4) ||
+            date.getMonth() >= 5) &&
+          link.displayLink == "brickbot.ro/formular230"
+        ) {
+          return null;
+        }
+
         return (
           <motion.div
             key={index}
