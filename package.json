@@ -2,6 +2,7 @@
   "name": "brickbot-links",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,24 +10,24 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@next/swc-wasm-nodejs": "^16.1.3",
+    "@next/swc-wasm-nodejs": "^16.1.6",
     "@vercel/analytics": "^1.6.1",
     "brickbot-ui": "^0.1.4",
-    "motion": "^12.24.8",
-    "next": "16.1.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3",
+    "motion": "^12.29.2",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^25.0.3",
+    "@types/node": "^25.1.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.1.1",
+    "eslint-config-next": "^16.1.6",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "vercel": "^50.1.6"
+    "vercel": "^50.8.1"
   }
 }

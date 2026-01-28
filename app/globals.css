@@ -4,6 +4,8 @@
 :root {
   --content-width: min(calc(100vw - 3rem), 25rem);
 
+  color-scheme: dark;
+
   .font-semi-condensed {
     font-stretch: semi-condensed;
     font-weight: 900;

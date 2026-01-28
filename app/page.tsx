@@ -13,6 +13,7 @@ import {
 import { PiTiktokLogoLight, PiYoutubeLogoLight } from "react-icons/pi";
 import { VscGithubAlt } from "react-icons/vsc";
 import { motion } from "framer-motion";
+import { CDN_LINK } from "./constants";
 
 export default function Home() {
   const date = new Date();
@@ -22,11 +23,11 @@ export default function Home() {
       <div
         className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#1c1c1c] to-(--bg-dark) to-70% h-auto w-full max-w-[min(100vw,120rem)] aspect-[1.8/1] object-contain max-h-screen"
         style={{
-          WebkitMaskImage: "url(/brickbot-yellow.svg)",
+          WebkitMaskImage: `url(${CDN_LINK}/website/branding/brick-yellow.svg)`,
           WebkitMaskRepeat: "no-repeat",
           WebkitMaskPosition: "center",
           WebkitMaskSize: "contain",
-          maskImage: "url(/brickbot-yellow.svg)",
+          maskImage: `url(${CDN_LINK}/website/branding/brick-yellow.svg)`,
           maskRepeat: "no-repeat",
           maskPosition: "center",
           maskSize: "contain",
@@ -41,7 +42,7 @@ export default function Home() {
         >
           <div className="relative w-full h-[clamp(4.5rem,_4.5rem+1vw,_6rem)] overflow-hidden">
             <Image
-              src="brickbot-yellow.svg"
+              src={CDN_LINK + "/website/branding/brick-yellow.svg"}
               alt="BrickBot Logo"
               fill
               priority
@@ -51,7 +52,7 @@ export default function Home() {
           </div>
           <div className="relative w-full h-[clamp(2.5rem,_2.5rem+1vw,_4rem)] mt-[var(--related-gap)] overflow-hidden">
             <Image
-              src="brickbot-text.svg"
+              src={CDN_LINK + "/website/branding/brick-text.svg"}
               alt="BrickBot"
               fill
               priority
@@ -196,15 +197,15 @@ function Links() {
       highlighted: false,
       link: "https://brickbot.ro/formular230",
       icon: (
-        <div className="h-(--icon-size) w-(--icon-size) p-[0.1rem]">
+        <div className="h-(--icon-size) w-(--icon-size)">
           <div
             className="w-full h-full bg-(--text)"
             style={{
-              WebkitMaskImage: "url(/230.svg)",
+              WebkitMaskImage: `url(${CDN_LINK}/website/support-us/230.svg)`,
               WebkitMaskRepeat: "no-repeat",
               WebkitMaskPosition: "center",
               WebkitMaskSize: "contain",
-              maskImage: "url(/230.svg)",
+              maskImage: `url(${CDN_LINK}/website/support-us/230.svg)`,
               maskRepeat: "no-repeat",
               maskPosition: "center",
               maskSize: "contain",

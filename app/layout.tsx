@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -37,14 +37,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <link
-        rel="icon"
-        type="image/x-icon"
-        href="/dark-bg-favicon.ico"
-      />
-      <body className={`antialiased`}
-        >{children}
+    <html
+      lang="en"
+      className="overflow-x-hidden"
+    >
+      <head>
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/dark-bg-favicon.ico"
+        />
+      </head>
+      <body className={`antialiased`}>
+        {children}
         <Analytics />
       </body>
     </html>
