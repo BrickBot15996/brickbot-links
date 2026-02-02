@@ -2,12 +2,13 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
+import { CDN_LINK } from "./constants";
 
 export const metadata: Metadata = {
   title: "BrickBot - Links",
   description: "Links relevant to our current initiatives.",
   icons: {
-    icon: "/favicon.ico",
+    icon: CDN_LINK + "/branding/favicon.ico",
   },
   alternates: {
     canonical: "https://links.brickbot.ro/",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "BrickBot - Links",
     images: [
       {
-        url: "https://brickbot.ro/embed-icon.png",
+        url: CDN_LINK + "/branding/embed.png",
         width: 256,
         height: 256,
         alt: "BrickBot Icon",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://brickbot.ro/embed-icon.png"],
+    images: [CDN_LINK + "/branding/embed.png"],
   },
 };
 
@@ -45,7 +46,7 @@ export default function RootLayout({
         <link
           rel="icon"
           type="image/x-icon"
-          href="/dark-bg-favicon.ico"
+          href={CDN_LINK + "/branding/dark-favicon.ico"}
         />
       </head>
       <body className={`antialiased`}>

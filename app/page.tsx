@@ -23,11 +23,11 @@ export default function Home() {
       <div
         className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#1c1c1c] to-(--bg-dark) to-70% h-auto w-full max-w-[min(100vw,120rem)] aspect-[1.8/1] object-contain max-h-screen"
         style={{
-          WebkitMaskImage: `url(${CDN_LINK}/website/branding/brick-yellow.svg)`,
+          WebkitMaskImage: `url(${CDN_LINK}/branding/logo.svg)`,
           WebkitMaskRepeat: "no-repeat",
           WebkitMaskPosition: "center",
           WebkitMaskSize: "contain",
-          maskImage: `url(${CDN_LINK}/website/branding/brick-yellow.svg)`,
+          maskImage: `url(${CDN_LINK}/branding/logo.svg)`,
           maskRepeat: "no-repeat",
           maskPosition: "center",
           maskSize: "contain",
@@ -42,7 +42,7 @@ export default function Home() {
         >
           <div className="relative w-full h-[clamp(4.5rem,_4.5rem+1vw,_6rem)] overflow-hidden">
             <Image
-              src={CDN_LINK + "/website/branding/brick-yellow.svg"}
+              src={CDN_LINK + "/branding/logo.svg"}
               alt="BrickBot Logo"
               fill
               priority
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <div className="relative w-full h-[clamp(2.5rem,_2.5rem+1vw,_4rem)] mt-[var(--related-gap)] overflow-hidden">
             <Image
-              src={CDN_LINK + "/website/branding/brick-text.svg"}
+              src={CDN_LINK + "/branding/name.svg"}
               alt="BrickBot"
               fill
               priority
@@ -201,11 +201,11 @@ function Links() {
           <div
             className="w-full h-full bg-(--text)"
             style={{
-              WebkitMaskImage: `url(${CDN_LINK}/website/support-us/230.svg)`,
+              WebkitMaskImage: `url(${CDN_LINK}/icons/230.svg)`,
               WebkitMaskRepeat: "no-repeat",
               WebkitMaskPosition: "center",
               WebkitMaskSize: "contain",
-              maskImage: `url(${CDN_LINK}/website/support-us/230.svg)`,
+              maskImage: `url(${CDN_LINK}/icons/230.svg)`,
               maskRepeat: "no-repeat",
               maskPosition: "center",
               maskSize: "contain",
