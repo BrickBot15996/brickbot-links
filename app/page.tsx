@@ -186,12 +186,6 @@ function SocialIcons() {
 function Links() {
   const linkList = [
     {
-      title: "Participate at Focșani Tech Challenge League Meet!",
-      displayLink: "brickbot.ro/meet",
-      highlighted: true,
-      link: "https://brickbot.ro/meet",
-    },
-    {
       title: "Redirect 3.5% of your income tax to help BrickBot!",
       displayLink: "brickbot.ro/formular230",
       highlighted: false,
