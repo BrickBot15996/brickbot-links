@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import { IconCard, LinkCard } from "brickbot-ui";
-import Image from "next/image";
-import Link from "next/link";
+import { IconCard, LinkCard } from 'brickbot-ui';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   CiFacebook,
   CiGlobe,
   CiInstagram,
   CiLinkedin,
   CiMail,
-} from "react-icons/ci";
-import { PiTiktokLogoLight, PiYoutubeLogoLight } from "react-icons/pi";
-import { VscGithubAlt } from "react-icons/vsc";
-import { motion } from "framer-motion";
-import { CDN_LINK } from "./constants";
+} from 'react-icons/ci';
+import { PiTiktokLogoLight, PiYoutubeLogoLight } from 'react-icons/pi';
+import { VscGithubAlt } from 'react-icons/vsc';
+import { motion } from 'framer-motion';
+import { CDN_LINK } from './constants';
 
 export default function Home() {
   const date = new Date();
@@ -24,25 +24,25 @@ export default function Home() {
         className="absolute top-[min(calc(20rem-18vw),0rem)] bg-linear-to-b from-[#1c1c1c] to-(--bg-dark) to-70% h-auto w-full max-w-[min(100vw,120rem)] aspect-[1.8/1] object-contain max-h-screen"
         style={{
           WebkitMaskImage: `url(${CDN_LINK}/branding/logo.svg)`,
-          WebkitMaskRepeat: "no-repeat",
-          WebkitMaskPosition: "center",
-          WebkitMaskSize: "contain",
+          WebkitMaskRepeat: 'no-repeat',
+          WebkitMaskPosition: 'center',
+          WebkitMaskSize: 'contain',
           maskImage: `url(${CDN_LINK}/branding/logo.svg)`,
-          maskRepeat: "no-repeat",
-          maskPosition: "center",
-          maskSize: "contain",
+          maskRepeat: 'no-repeat',
+          maskPosition: 'center',
+          maskSize: 'contain',
         }}
       />
       <div className="flex flex-col items-center justify-center gap-[2rem] mt-[clamp(2.5rem,2rem+5vw,6rem)] h-full max-w-(--content-width) z-[100]">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: 'easeOut' }}
           className="w-full h-full flex flex-col gap-[1rem] items-center"
         >
           <div className="relative w-full h-[clamp(4.5rem,_4.5rem+1vw,_6rem)] overflow-hidden">
             <Image
-              src={CDN_LINK + "/branding/logo.svg"}
+              src={CDN_LINK + '/branding/logo.svg'}
               alt="BrickBot Logo"
               fill
               priority
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <div className="relative w-full h-[clamp(2.5rem,_2.5rem+1vw,_4rem)] mt-[var(--related-gap)] overflow-hidden">
             <Image
-              src={CDN_LINK + "/branding/name.svg"}
+              src={CDN_LINK + '/branding/name.svg'}
               alt="BrickBot"
               fill
               priority
@@ -69,8 +69,8 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          className="mb-[2rem] mt-[2rem] text-[#9B9B9B] text-xs"
+          transition={{ duration: 0.4, ease: 'easeOut' }}
+          className="absolute left-auto right-auto bottom-[2rem] text-[#9B9B9B] text-xs"
         >
           BrickBot © {date.getFullYear()}
         </motion.div>
@@ -87,8 +87,8 @@ function SocialIcons() {
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
           visualDuration: 0.4,
-          ease: "easeOut",
-          type: "spring",
+          ease: 'easeOut',
+          type: 'spring',
           bounce: 0.35,
         }}
         className="flex flex-row justify-between items-center w-full"
@@ -135,8 +135,8 @@ function SocialIcons() {
         animate={{ opacity: 1, translateY: 0 }}
         transition={{
           visualDuration: 0.4,
-          ease: "easeOut",
-          type: "spring",
+          ease: 'easeOut',
+          type: 'spring',
           bounce: 0.35,
           delay: 0.1,
         }}
@@ -186,23 +186,23 @@ function SocialIcons() {
 function Links() {
   const linkList = [
     {
-      title: "Redirect 3.5% of your income tax to help BrickBot!",
-      displayLink: "brickbot.ro/formular230",
+      title: 'Redirect 3.5% of your income tax to help BrickBot!',
+      displayLink: 'brickbot.ro/formular230',
       highlighted: false,
-      link: "https://brickbot.ro/formular230",
+      link: 'https://brickbot.ro/formular230',
       icon: (
         <div className="h-(--icon-size) w-(--icon-size)">
           <div
             className="w-full h-full bg-(--text)"
             style={{
               WebkitMaskImage: `url(${CDN_LINK}/icons/230.svg)`,
-              WebkitMaskRepeat: "no-repeat",
-              WebkitMaskPosition: "center",
-              WebkitMaskSize: "contain",
+              WebkitMaskRepeat: 'no-repeat',
+              WebkitMaskPosition: 'center',
+              WebkitMaskSize: 'contain',
               maskImage: `url(${CDN_LINK}/icons/230.svg)`,
-              maskRepeat: "no-repeat",
-              maskPosition: "center",
-              maskSize: "contain",
+              maskRepeat: 'no-repeat',
+              maskPosition: 'center',
+              maskSize: 'contain',
             }}
           />
         </div>
@@ -213,12 +213,12 @@ function Links() {
   const date = new Date();
 
   return (
-    <div className="flex flex-col gap-[2rem]">
+    <div className="flex flex-col gap-[2rem] mb-[5.5rem]">
       {linkList.map((link, index) => {
         if (
           ((date.getDate() > 24 && date.getMonth() === 4) ||
             date.getMonth() >= 5) &&
-          link.displayLink == "brickbot.ro/formular230"
+          link.displayLink == 'brickbot.ro/formular230'
         ) {
           return null;
         }
@@ -230,8 +230,8 @@ function Links() {
             animate={{ opacity: 1, translateY: 0 }}
             transition={{
               visualDuration: 0.4,
-              ease: "easeOut",
-              type: "spring",
+              ease: 'easeOut',
+              type: 'spring',
               bounce: 0.35,
               delay: index * 0.1 + 0.2,
             }}
